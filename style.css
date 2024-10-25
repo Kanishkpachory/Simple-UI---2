@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main img{
+    height: 700px;
+    width: 500px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+}
+
+.div-scroller{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.div-scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.div-scroller h1{
+    font-size: 9vw;
+    font-weight: bolder;
+    display: inline-block;
+    letter-spacing: 0.3vw;
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.div-scroller1{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 100;
+}
+
+.div-scroller1::-webkit-scrollbar{
+    display: none;
+}
+
+.div-scroller1 h1{
+    color: transparent;
+    font-size: 9vw;
+    font-weight: bolder;
+    display: inline-block;
+    letter-spacing: 0.3vw;
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke:2px black;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.div-scroller2{
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+.div-scroller2::-webkit-scrollbar{
+    display: none;
+}
+
+.div-scroller2 h1{
+    font-size: 9vw;
+    font-weight: bolder;
+    display: inline-block;
+    letter-spacing: 0.3vw;
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.text-div{
+    position: absolute;
+    width: 50%;
+    top: 16%;
+    text-align: center;
+    font-size:2vw;
+    font-weight: bolder;
+    /* background-color: aqua; */
+    z-index: 101;
+    text-transform: uppercase;
+}
+
+@keyframes scroll {
+    0%{
+        /* transform: translateX(calc(-100% -35px)); */
+        /* transform: translateX(0); */
+        transform: translateX(-100% ); 
+    }
+    100%{
+        transform: translateX(0);
+        /* transform: translateX(-100%); */
+        /* transform: translateX(0); */
+    }
+}
